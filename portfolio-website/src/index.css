@@ -11,6 +11,7 @@
 }
 
 :root {
+    --color-bg-general: #313155;
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
@@ -35,7 +36,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-general);
     color: var(--color-white);
     line-height: 1.7;
 }
@@ -58,6 +59,7 @@ h1 {
 
 section {
     margin-top: 8rem;
+    height: 100vh;
 }
 
 section > h2, section > h5 {
