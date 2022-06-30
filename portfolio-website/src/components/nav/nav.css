@@ -14,7 +14,7 @@ nav {
 }
 
 nav a {
-    background: transparent;
+    background: rgba(128, 128, 128, 0.091);
     padding: .9rem;
     border-radius: 50%;
     display: flex;
