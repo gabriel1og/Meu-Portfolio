@@ -36,6 +36,13 @@
     font-size: .8rem;
 }
 
+.btn.btn-primary {
+    width: 100%;
+    font-size: .95rem;
+    color: var(--color-bg-general);
+    font-weight: 500;
+}
+
 /* FORM */
 
 form {
