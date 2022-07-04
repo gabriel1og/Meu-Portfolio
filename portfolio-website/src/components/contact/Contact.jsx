@@ -5,6 +5,24 @@ import { MdOutlineEmail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
 
+const contacts = [
+  {
+    name: 'Email',
+    user: 'gogomide.go@gmail.com',
+    link: 'mailto:gogomide.go@gmail.com'
+  },
+  {
+    name: 'Messenger',
+    user: 'gabriel1og',
+    link: 'https://m.me/gabriel1og'
+  },
+  {
+    name: 'Whatsapp',
+    user: '+55 (31)99528-1401',
+    link: 'https://api.whatsapp.com/send?phone=5531995281401'
+  }
+]
+
 const Contact = () => {
   const form = useRef();
 
@@ -28,26 +46,18 @@ const Contact = () => {
 
       <div className='container contact__container'>
         <div className="contact__options">
-          <article className="contact__option">
-            <MdOutlineEmail className='contact__option-icon' />
-            <h4>Email</h4>
-            <h5>gogomide.go@gmail.com</h5>
-            <a href="mailto:gogomide.go@gmail.com" target='_blank'>Send a message</a>
-          </article>
-
-          <article className="contact__option">
-            <RiMessengerLine className='contact__option-icon' />
-            <h4>Messenger</h4>
-            <h5>gabriel1og</h5>
-            <a href="https://m.me/gabriel1og" target='_blank'>Send a message</a>
-          </article>
-
-          <article className="contact__option">
-            <BsWhatsapp className='contact__option-icon' />
-            <h4>Whatsapp</h4>
-            <h5>+55 (31)99528-1401</h5>
-            <a href="https://api.whatsapp.com/send?phone=5531995281401" target='_blank'>Send a message</a>
-          </article>
+          {
+            contacts.map(({name, user, link}, index) => {
+              return (
+                <article key={index} className="contact__option">
+                  <MdOutlineEmail className='contact__option-icon' />
+                  <h4>{name}</h4>
+                  <h5>{user}</h5>
+                  <a href={link} target='_blank'>Send a message</a>
+                </article>
+              )
+            })
+          }     
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
