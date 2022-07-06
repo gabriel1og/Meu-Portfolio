@@ -1,6 +1,6 @@
 .experience__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -26,7 +26,8 @@
 
 .experience__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     row-gap: 2rem;
 }
 
@@ -38,6 +39,10 @@
 .experience__details-icon {
     margin-top: 6px;
     color: var(--color-primary);
+}
+
+.experience__backend {
+    display: none;
 }
 
 @media screen and (max-width: 1024px) {

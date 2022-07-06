@@ -36,7 +36,7 @@
     font-size: .8rem;
 }
 
-.btn.btn-primary {
+.btn.btn-primary.sm {
     width: 100%;
     font-size: .95rem;
     color: var(--color-bg-general);
