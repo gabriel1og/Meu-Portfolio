@@ -6,22 +6,24 @@
 
 .service {
     background: var(--color-bg-variant);
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 1rem 1rem 1.5rem 1.5rem;
     border: 1px solid var(--color-primary);
+    border-top: none;
     height: fit-content;
     transition: var(--transition);
 }
 
 .service:hover {
     background: transparent;
-    border-color: var(--color-primary-variant);
+    border: 1px solid var(--color-primary-variant);
     cursor: default;
+    border-top: none;
 }
 
 .service__head {
     background: var(--color-primary);
     padding: 2rem;
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 1rem 1rem 1.5rem 1.5rem;
     box-shadow: 0 2rem 1rem rgba(0, 0, 0, .1);
 }
 
@@ -50,29 +52,30 @@
     font-size: .9rem;
 }
 
-.more {
+.more div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-top: 2rem;
     padding: 1rem;
     background-color: rgba(127, 127, 127, 0.256);
-    width: 35%;
     border-radius: .75rem;
 }
 
-@media screen and (max-width: 1024px) {
-    .services__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
+.more div p {
+    margin-left: .4rem;
+}
 
+@media screen and (max-width: 1024px) {
     .service {
         height: auto;
     }
+
 }
 
 @media screen and (max-width: 600px) {
-    .services__container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .more div {
+        width: 100%;
     }
 }
 

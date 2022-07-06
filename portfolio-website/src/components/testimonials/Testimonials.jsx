@@ -4,7 +4,6 @@ import av1 from '../../assets/av1.jfif'
 import av2 from '../../assets/av2.jfif'
 import av3 from '../../assets/av3.jfif'
 import av4 from '../../assets/av4.jfif'
-import { Skeleton, SkeletonCircle, SkeletonText, Box, Stack } from '@chakra-ui/react'
 
 // import Swiper core and required modules
 import {  Pagination } from 'swiper';
