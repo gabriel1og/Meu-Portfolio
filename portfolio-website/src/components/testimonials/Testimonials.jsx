@@ -4,6 +4,7 @@ import av1 from '../../assets/av1.jfif'
 import av2 from '../../assets/av2.jfif'
 import av3 from '../../assets/av3.jfif'
 import av4 from '../../assets/av4.jfif'
+import { Skeleton, SkeletonCircle, SkeletonText, Box, Stack } from '@chakra-ui/react'
 
 // import Swiper core and required modules
 import {  Pagination } from 'swiper';
@@ -16,32 +17,22 @@ import 'swiper/css/pagination';
 
 const test = [
   {
-    avatar: av1,
-    name: 'Jorge Bischoff',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Necessitatibus modi commodi labore optio voluptas placeat.'
-  },
-  {
-    avatar: av2,
-    name: 'Ana Witsel',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Necessitatibus modi commodi labore optio voluptas placeat.'
-  },
-  {
     avatar: av3,
-    name: 'Andre Castro',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Necessitatibus modi commodi labore optio voluptas placeat.'
+    name: '(imagens meramente ilustrativas)',
+    review: 'Em breve...'
   },
   {
     avatar: av4,
-    name: 'Maria Weber',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Necessitatibus modi commodi labore optio voluptas placeat.'
-  }
+    name: '(imagens meramente ilustrativas)',
+    review: 'Em breve...'
+  },
 ]
 
 const Testimonials = () => {
   return (
     <section id='testimonials'>
-      <h5>Review from clients</h5>
-      <h2>Testimonials</h2>
+      <h5>Feedbacks dos clientes</h5>
+      <h2>Depoimentos</h2>
 
       <Swiper
        className="container testimonials__container"
@@ -64,7 +55,7 @@ const Testimonials = () => {
                 <small className='client__review'>
                   {review}
                 </small>
-              </SwiperSlide>
+               </SwiperSlide>
             )
           })
         }

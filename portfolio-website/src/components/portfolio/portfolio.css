@@ -10,6 +10,7 @@
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    height: fit-content;
 }
 
 .portfolio__item:hover {
@@ -20,6 +21,7 @@
 .portfolio__item-image {
     border-radius: 1.5rem;
     overflow: hidden;
+    
 }
 
 .portfolio__item h3 {
@@ -30,6 +32,11 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.btn.git {
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (max-width: 1024px) {

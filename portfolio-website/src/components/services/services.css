@@ -1,6 +1,6 @@
 .services__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 
@@ -48,6 +48,14 @@
 
 .service__list p {
     font-size: .9rem;
+}
+
+.more {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(127, 127, 127, 0.256);
+    width: 35%;
+    border-radius: .75rem;
 }
 
 @media screen and (max-width: 1024px) {

@@ -29,22 +29,23 @@ const About = () => {
             <article className="about__card">
               <FiUsers className='about__icon'/>
               <h5>Clientes</h5>
-              <small>2 autônomos</small>
+              <small>1 até o momento</small>
             </article>
 
             <article className="about__card">
               <VscFolderLibrary className='about__icon'/>
               <h5>Projetos</h5>
-              <small>4 Completos</small>
+              <small>5 Completos</small>
             </article>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Aut, harum? Aperiam impedit maxime molestias, nulla iusto
-            dolores? Laudantium voluptates, reprehenderit voluptate 
-            quidem quisquam fugit debitis beatae! Ipsam inventore sed
-            suscipit?
+            Sou estudante de Engenharia de Software e programo há 2 anos. Em projetos 
+            acadêmicos sempre fiquei responsável pelo front-end das aplicações desenvolvidas,
+            portanto em projetos pessoais e no meu estágio atual também me dedico e tenho foco total
+            no front-end dos sistemas que auxilio no desenvolvimento. Porém, não gosto de me acostumar
+            e entrar na zona de conforto, por isso almejo adquirir novos conhecimentos em UI/UX Design e
+            também no back-end.
           </p>
 
           <a href="#contact" className='btn btn-primary'>Entre em contato</a>
