@@ -19,13 +19,6 @@ const data = [
     github: 'https://github.com/gabriel1og/Projeto-Calculo-IMC',
     demo: '#'
   },
-  {
-    id: 3,
-    image: p3,
-    title: 'Projeto - Portal de Notícias',
-    github: 'https://github.com/gabriel1og/Portal_Noticias',
-    demo: '#'
-  },
 ]
 
 const Portfolio = () => {
@@ -42,7 +35,11 @@ const Portfolio = () => {
                 <div className="portfolio__item-image">
                   <img src={image} alt={title} />
                 </div>
-                <h3>{title}</h3>
+
+                <div className='portfolio__item-title'>
+                  <h3>{title}</h3>
+                </div>
+              
                 <div className="portfolio__item-cta">
                   <a href={github} className='btn git' target='_blank'>Github</a>
                   {/* <a href={demo} className='btn btn-primary' target='_blank'>Demonstração</a> */}

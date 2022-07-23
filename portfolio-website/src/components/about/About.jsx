@@ -48,7 +48,7 @@ const About = () => {
             também no back-end.
           </p>
 
-          <a href="#contact" className='btn btn-primary'>Entre em contato</a>
+          <a href="#contact" className='btn btn-primary ec'>Entre em contato</a>
         </div>
       </div> 
     </section>

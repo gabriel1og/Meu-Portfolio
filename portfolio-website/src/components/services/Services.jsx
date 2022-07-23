@@ -31,8 +31,10 @@ const Services = () => {
             </li>
 
             <li className='more'>
-              <GoRocket className='service__list-icon'/>
-              <p>Em breve mais novidades e serviços...</p>
+              <div>
+                <GoRocket className='service__list-icon'/>
+                <p>Em breve mais novidades e serviços...</p>
+              </div>
             </li>
           </ul>
         </article>
