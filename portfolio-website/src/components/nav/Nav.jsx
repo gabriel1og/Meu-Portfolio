@@ -8,6 +8,13 @@ import { useState } from 'react'
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#');
 
+  const scrollDown = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div>
       <nav>
@@ -15,6 +22,7 @@ const Nav = () => {
          href="#" 
          onClick={() => setActiveNav('#')}
          className={activeNav === '#' ? 'active' : ''}
+        
         >
           <AiOutlineHome />
         </a>
