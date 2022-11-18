@@ -29,13 +29,13 @@ const About = () => {
             <article className="about__card">
               <FiUsers className='about__icon'/>
               <h5>Clientes</h5>
-              <small>3 até o momento</small>
+              <small>Trabalhos Freelancer</small>
             </article>
 
             <article className="about__card">
               <VscFolderLibrary className='about__icon'/>
               <h5>Projetos</h5>
-              <small>5 Completos</small>
+              <small>Disponíveis no meu GitHub</small>
             </article>
           </div>
 
@@ -43,8 +43,8 @@ const About = () => {
             Sou estudante de Engenharia de Software e programo há 2 anos. Em projetos 
             acadêmicos sempre fiquei responsável pelo front-end das aplicações desenvolvidas,
             portanto em projetos pessoais e no meu estágio atual também me dedico e tenho foco total
-            no front-end dos sistemas que auxilio no desenvolvimento. Porém, não gosto de me acostumar
-            e entrar na zona de conforto, por isso almejo adquirir novos conhecimentos em UI/UX Design e
+            no front-end dos sistemas que auxilio no desenvolvimento. Porém, não me limito à esta área e,
+            por isso, procuro adquirir novos conhecimentos em UI/UX Design e
             também no back-end.
           </p>
 
