@@ -2,7 +2,7 @@ import React from 'react'
 import './portfolio.css'
 import p1 from '../../assets/JogoMemoria Projeto.png'
 import p2 from '../../assets/IMC Projeto.png'
-import p3 from '../../assets/p3.webp'
+import p3 from '../../assets/finances.png'
 
 const data = [
   {
@@ -10,14 +10,21 @@ const data = [
     image: p1,
     title: 'Projeto - Jogo da Memória',
     github: 'https://github.com/gabriel1og/Memory-Game-Project',
-    demo: '#'
+    demo: 'memory-game-project-mu.vercel.app'
   },
   {
     id: 2,
     image: p2,
     title: 'Projeto - Cálculo de IMC',
     github: 'https://github.com/gabriel1og/Projeto-Calculo-IMC',
-    demo: '#'
+    demo: 'https://projeto-calculo-imc.vercel.app/'
+  },
+  {
+    id: 3,
+    image: p3,
+    title: 'Projeto - Finances Management',
+    github: 'https://github.com/gabriel1og/Finances-Management',
+    demo: 'https://finances-management-beta.vercel.app/'
   },
 ]
 
@@ -41,8 +48,8 @@ const Portfolio = () => {
                 </div>
               
                 <div className="portfolio__item-cta">
-                  <a href={github} className='btn git' target='_blank'>Github</a>
-                  {/* <a href={demo} className='btn btn-primary' target='_blank'>Demonstração</a> */}
+                  <a href={github} className='btn git' target='_blank' rel="noreferrer">Github</a>
+                  <a href={demo} className='btn btn-primary' target='_blank' rel="noreferrer">Demonstração</a>
                 </div>
               </article>
             )
