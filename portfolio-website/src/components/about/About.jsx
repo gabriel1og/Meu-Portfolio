@@ -43,9 +43,8 @@ const About = () => {
             Sou estudante de Engenharia de Software e programo há 2 anos. Em projetos 
             acadêmicos sempre fiquei responsável pelo front-end das aplicações desenvolvidas,
             portanto em projetos pessoais e no meu estágio atual também me dedico e tenho foco total
-            no front-end dos sistemas que auxilio no desenvolvimento. Porém, não me limito à esta área e,
-            por isso, procuro adquirir novos conhecimentos em UI/UX Design e
-            também no back-end.
+            no front-end dos sistemas que auxilio no desenvolvimento. Porém, não me limito à esta área e
+            procuro expandir meus estudos/trabalhos ao UI/UX Design e back-end.
           </p>
 
           <a href="#contact" className='btn btn-primary ec'>Entre em contato</a>
