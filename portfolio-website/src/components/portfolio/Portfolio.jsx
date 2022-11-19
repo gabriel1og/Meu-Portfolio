@@ -2,7 +2,7 @@ import React from 'react'
 import './portfolio.css'
 import p1 from '../../assets/JogoMemoria Projeto.png'
 import p2 from '../../assets/IMC Projeto.png'
-import p3 from '../../assets/finances.png'
+import p3 from '../../assets/FinancesManagement.png'
 
 const data = [
   {
