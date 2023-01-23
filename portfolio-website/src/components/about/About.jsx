@@ -8,8 +8,8 @@ import { VscFolderLibrary } from 'react-icons/vsc'
 const About = () => {
   return (
     <section id='about'>
-      <h5>Me conheça</h5>
-      <h2>Sobre mim</h2>
+      <h5>Know me</h5>
+      <h2>About me</h2>
 
       <div className="container about__container">
         <div className="about__me">
@@ -22,32 +22,31 @@ const About = () => {
           <div className="about__cards">
             <article className="about__card">
               <FaAward className='about__icon'/>
-              <h5>Experiência</h5>
-              <small>1 ano como dev front-end</small>
+              <h5>Experience</h5>
+              <small>1 year as Frontend developer</small>
             </article>
 
             <article className="about__card">
               <FiUsers className='about__icon'/>
-              <h5>Clientes</h5>
-              <small>Trabalhos Freelancer</small>
+              <h5>Clients</h5>
+              <small>Freelancer Jobs</small>
             </article>
 
             <article className="about__card">
               <VscFolderLibrary className='about__icon'/>
-              <h5>Projetos</h5>
-              <small>Disponíveis no meu GitHub</small>
+              <h5>Projects</h5>
+              <small>Available on my GitHub</small>
             </article>
           </div>
 
           <p>
-            Sou estudante de Engenharia de Software e programo há 2 anos. Em projetos 
-            acadêmicos sempre fiquei responsável pelo front-end das aplicações desenvolvidas,
-            portanto em projetos pessoais e no meu estágio atual também me dedico e tenho foco total
-            no front-end dos sistemas que auxilio no desenvolvimento. Porém, não me limito à esta área e
-            procuro expandir meus estudos/trabalhos ao UI/UX Design e back-end.
+            I'm a Software Engineering student and in touch with programming about almost 3 years. In academic projects, 
+            I've always been responsible for developed softwares Frontend, therefore in personal projects and in my 
+            internship I also look for learning more and work hard on this development area. But, on the other hand I don't
+            limit my knowledge on Frontend and try to know and learn more about UI/UX, Backend and Cloud/Architecture concepts too.
           </p>
 
-          <a href="#contact" className='btn btn-primary ec'>Entre em contato</a>
+          <a href="#contact" className='btn btn-primary ec'>Get in touch</a>
         </div>
       </div> 
     </section>

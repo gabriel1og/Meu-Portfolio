@@ -25,7 +25,7 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className='footer__logo'>TÓPICOS</a>
+      <a href="#" className='footer__logo'>Topics</a>
 
       <ul className='permaLinks'>
         <li>
@@ -33,15 +33,15 @@ const Footer = () => {
         </li>
 
         <li>
-          <a href="#about">Sobre</a>
+          <a href="#about">About</a>
         </li>
 
         <li>
-          <a href="#experience">Experiência</a>
+          <a href="#experience">Experiencie</a>
         </li>
 
         <li>
-          <a href="#services">Serviços</a>
+          <a href="#services">Services</a>
         </li>
 
         <li>
@@ -49,11 +49,11 @@ const Footer = () => {
         </li>
 
         <li style={{ display: "none" }}>
-          <a href="#testimonials">Depoimentos</a>
+          <a href="#testimonials">Testimonials</a>
         </li>
 
         <li>
-          <a href="#contact">Contato</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
 

@@ -39,8 +39,8 @@ const Contact = () => {
 
   return (
     <section id='contact'>
-      <h5>Meus contatos</h5>
-      <h2>Entre em contato</h2>
+      <h5>My contacts</h5>
+      <h2>Get in touch</h2>
 
       <div className='container contact__container'>
         <div className="contact__options">
@@ -51,7 +51,7 @@ const Contact = () => {
                   <h1 className='contact__option-icon'>{icon}</h1> 
                   <h4>{name}</h4>
                   <h5>{user}</h5>
-                  <a href={link} target='_blank'>Enviar mensagem</a>
+                  <a href={link} target='_blank'>Send Message</a>
                 </article>
               )
             })
@@ -59,10 +59,10 @@ const Contact = () => {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Seu nome' required />
-          <input type="email" name="email" placeholder='Seu email' required />
-          <textarea name="message" rows="7" placeholder='Sua mensagem' required ></textarea>
-          <button type="submit" className='btn btn-primary sm'>Enviar mensagem</button>
+          <input type="text" name='name' placeholder='Your name' required />
+          <input type="email" name="email" placeholder='Your email' required />
+          <textarea name="message" rows="7" placeholder='Your message' required ></textarea>
+          <button type="submit" className='btn btn-primary sm'>Send message</button>
         </form>
       </div>
     </section>

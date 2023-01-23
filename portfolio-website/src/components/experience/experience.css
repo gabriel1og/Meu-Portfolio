@@ -41,10 +41,6 @@
     color: var(--color-primary);
 }
 
-.experience__backend {
-    display: none;
-}
-
 @media screen and (max-width: 1024px) {
     .experience__container {
         grid-template-columns: 1fr;

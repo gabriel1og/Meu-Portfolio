@@ -8,21 +8,21 @@ const data = [
   {
     id: 1,
     image: p1,
-    title: 'Projeto - Jogo da Memória',
+    title: 'Project - Memory Game',
     github: 'https://github.com/gabriel1og/Memory-Game-Project',
     demo: 'https://memory-game-project-mu.vercel.app/'
   },
   {
     id: 2,
     image: p2,
-    title: 'Projeto - Cálculo de IMC',
+    title: 'Project - BMI calculation',
     github: 'https://github.com/gabriel1og/Projeto-Calculo-IMC',
     demo: 'https://projeto-calculo-imc.vercel.app/'
   },
   {
     id: 3,
     image: p3,
-    title: 'Projeto - Finances Management',
+    title: 'Project - Finances Management',
     github: 'https://github.com/gabriel1og/Finances-Management',
     demo: 'https://finances-management-beta.vercel.app/'
   },
@@ -31,7 +31,7 @@ const data = [
 const Portfolio = () => {
   return (
     <section id='portfolio'>
-      <h5>Meus Projetos</h5>
+      <h5>My Projects</h5>
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
@@ -49,7 +49,7 @@ const Portfolio = () => {
               
                 <div className="portfolio__item-cta">
                   <a href={github} className='btn git' target='_blank' rel="noreferrer">Github</a>
-                  <a href={demo} className='btn btn-primary' target='_blank' rel="noreferrer">Demonstração</a>
+                  <a href={demo} className='btn btn-primary' target='_blank' rel="noreferrer">Demo</a>
                 </div>
               </article>
             )
