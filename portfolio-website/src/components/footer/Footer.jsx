@@ -4,6 +4,23 @@ import { FaInstagram } from 'react-icons/fa'
 import { RiLinkedinFill } from 'react-icons/ri'
 import { BsGithub } from 'react-icons/bs'
 
+const socialLinks = [
+  {
+      id: 1,
+      link: "https://instagram.com/gabriel_gomidee",
+      content: <FaInstagram />
+  },
+  {
+      id: 2,
+      link: "https://www.linkedin.com/in/gabriel-oliveira-gomide-b343a41b5/",
+      content: <RiLinkedinFill />
+  },
+  {
+      id: 3,
+      link: "https://github.com/gabriel1og",
+      content: <BsGithub />
+  },
+]
 
 const Footer = () => {
   return (
@@ -31,7 +48,7 @@ const Footer = () => {
           <a href="#portfolio">Portfolio</a>
         </li>
 
-        <li>
+        <li style={{ display: "none" }}>
           <a href="#testimonials">Depoimentos</a>
         </li>
 
@@ -41,15 +58,11 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://instagram.com/gabriel_gomidee">
-          <FaInstagram />
-        </a>
-        <a href="https://www.linkedin.com/in/gabriel-oliveira-gomide-b343a41b5/">
-          <RiLinkedinFill />
-        </a>
-        <a href="https://github.com/gabriel1og">
-          <BsGithub />
-        </a>
+        {socialLinks.map(({id, link, content}) => {
+          return (
+            <a key={id} href={link} target="_blank">{content}</a>
+          )
+        })}
       </div>
 
       <div className="footer__copyright">
