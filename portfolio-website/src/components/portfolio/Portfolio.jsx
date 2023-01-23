@@ -10,7 +10,7 @@ const data = [
     image: p1,
     title: 'Projeto - Jogo da Memória',
     github: 'https://github.com/gabriel1og/Memory-Game-Project',
-    demo: 'memory-game-project-mu.vercel.app'
+    demo: 'https://memory-game-project-mu.vercel.app/'
   },
   {
     id: 2,
