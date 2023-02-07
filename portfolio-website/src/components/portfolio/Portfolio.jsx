@@ -1,80 +1,104 @@
-import React from 'react'
-import './portfolio.css'
-import p1 from '../../assets/CRUD Project.png'
-import p2 from '../../assets/FinancesManagement.png'
-import p3 from '../../assets/JogoMemoria Projeto.png'
-import p4 from '../../assets/IMC Projeto.png'
-import { FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiTypescript, SiStyledcomponents } from 'react-icons/si'
+import React from "react";
+import "./portfolio.css";
+import p1 from "../../assets/CRUD Project.png";
+import p2 from "../../assets/FinancesManagement.png";
+import p3 from "../../assets/JogoMemoria Projeto.png";
+import p4 from "../../assets/IMC Projeto.png";
+import { FaNodeJs, FaReact, FaGithub } from "react-icons/fa";
+import { SiTypescript, SiStyledcomponents, SiPostgresql } from "react-icons/si";
+import { CgWebsite } from 'react-icons/cg'
 
 const data = [
   {
     id: 1,
     image: p1,
-    title: 'Project - CRUD',
-    github: 'https://github.com/gabriel1og/CRUD-System',
-    demo: 'https://crud-system-henna.vercel.app/',
-    languages: [<FaReact size={30} />, <FaNodeJs size={30} />]
+    title: "CRUD",
+    github: "https://github.com/gabriel1og/CRUD-System",
+    demo: "https://crud-system-henna.vercel.app/",
+    languages: [<FaReact size={30} />, <FaNodeJs size={30} />, <SiPostgresql size={30} />],
   },
   {
     id: 2,
     image: p2,
-    title: 'Project - Finances Management',
-    github: 'https://github.com/gabriel1og/Finances-Management',
-    demo: 'https://finances-management-beta.vercel.app/',
-    languages: [<FaReact size={30} />, <SiTypescript size={30} />, <SiStyledcomponents size={36}/>]
+    title: "Finances Management",
+    github: "https://github.com/gabriel1og/Finances-Management",
+    demo: "https://finances-management-beta.vercel.app/",
+    languages: [
+      <FaReact size={30} />,
+      <SiTypescript size={30} />,
+      <SiStyledcomponents size={36} />,
+    ],
   },
   {
     id: 3,
     image: p3,
-    title: 'Project - Memory Game',
-    github: 'https://github.com/gabriel1og/Memory-Game-Project',
-    demo: 'https://memory-game-project-mu.vercel.app/',
-    languages: [<FaReact size={30} />, <SiTypescript size={30} />,  <SiStyledcomponents size={36} />]
+    title: "Memory Game",
+    github: "https://github.com/gabriel1og/Memory-Game-Project",
+    demo: "https://memory-game-project-mu.vercel.app/",
+    languages: [
+      <FaReact size={30} />,
+      <SiTypescript size={30} />,
+      <SiStyledcomponents size={36} />,
+    ],
   },
   {
     id: 4,
     image: p4,
-    title: 'Project - BMI calculation',
-    github: 'https://github.com/gabriel1og/Projeto-Calculo-IMC',
-    demo: 'https://projeto-calculo-imc.vercel.app/',
-    languages: [<FaReact size={30} />, <SiTypescript size={30} />]
+    title: "BMI calculation",
+    github: "https://github.com/gabriel1og/Projeto-Calculo-IMC",
+    demo: "https://projeto-calculo-imc.vercel.app/",
+    languages: [<FaReact size={30} />, <SiTypescript size={30} />],
   },
-]
+];
 
 const Portfolio = () => {
   return (
-    <section id='portfolio'>
+    <section id="portfolio">
       <h5>My Projects</h5>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio__container">
-        {
-          data.map(({id, image, title, github, demo, languages}) => {
-            return (
-              <article key={id} className="portfolio__item">
-                <div className="portfolio__item-image">
-                  <img src={image} alt={title} />
+      <div className="container projects">
+        {data.map(({ id, image, title, github, demo, languages }) => {
+          return (
+            <div class="card" key={id}>
+              <div class="img-section">
+                <img src={image} alt="" />
+              </div>
+              <div class="card-content">
+
+                <div className="title">
+                  <h3>{title}</h3>
                 </div>
 
-                <div className='portfolio__item-title'>
-                  <h3>{title}</h3>
-                  <div className="languages">
-                    {languages}
-                  </div>
+                <div className="languages">{languages}</div>
+
+                <div className="buttons">
+                  <a
+                    href={github}
+                    className="btn github"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Github
+                    <FaGithub />
+                  </a>
+                  <a
+                    href={demo}
+                    className="btn demo"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                    <CgWebsite />
+                  </a>
                 </div>
-              
-                <div className="portfolio__item-cta">
-                  <a href={github} className='btn git' target='_blank' rel="noreferrer">Github</a>
-                  <a href={demo} className='btn btn-primary' target='_blank' rel="noreferrer">Demo</a>
-                </div>
-              </article>
-            )
-          })
-        }
+              </div>
+            </div>
+          )
+        })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

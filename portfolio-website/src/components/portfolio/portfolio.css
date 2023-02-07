@@ -1,44 +1,61 @@
-.portfolio__container {
+.projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-}
-
-.portfolio__item {
-    background: var(--color-bg-variant);
-    padding: 1.2rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-    height: fit-content;
-}
-
-.portfolio__item:hover {
-    border-color: var(--color-primary-variant);
-    background: transparent;
-}
-
-.portfolio__item-image {
-    border-radius: 1.5rem;
-    overflow: hidden;
-    
-}
-
-.portfolio__item-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding-block: 2rem;
+    justify-items: center;
+    gap: 0;
+    padding-top: 2rem;
 }
 
-.portfolio__item h3 {
+.card {
+    width: 90%;
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+.card-content {
+    position: relative;
+    top: -140px;
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    padding: 1rem;
+    background-color: rgba(77, 80, 118, 0.7);
+    border: 1px solid rgba(77, 80, 118, 0.2);
+    opacity: .95;
+    backdrop-filter: blur(20px);
+    border-radius: .7rem;
+    transition: 1s all ease-in-out;
+    color: #fff;
+    font-weight: 600;
+}
+
+.img-section {
+    transition: 1s all ease-in-out;
+}
+
+.card img {
+    margin: 0 auto;
+    border-radius: .7rem;
+    height: 100%;
+    max-height: 300px;
+    width: 95%;
+}
+
+.title {
+    text-align: center;
+    padding-block: 1.5rem;
+}
+
+.title h3 {
     font-size: 1.2rem;
 }
 
-
 .languages {
     display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -46,36 +63,88 @@
     margin: 10px;
 }
 
-.portfolio__item-cta {
+.buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.btn.git {
+    padding: 1.2rem;
     width: 100%;
-    text-align: center;
 }
 
-@media screen and (max-width: 1062px) {
-    .portfolio__container {
+.btn.github, .btn.demo {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    border: none !important;
+}
+
+.btn.github, .btn.github:hover {
+    color: #fff;
+    background-color: #14222b;
+}
+
+.btn.demo {
+    color: #1c2c37;
+    background-color: #fff;
+    border: 1px solid #1c2c37;
+}
+
+.btn.github:hover, .btn.demo:hover {
+    transform: scale(1.02);
+}
+
+.card-content:hover {
+    box-shadow: 0px 8px 10px #ffffff20;
+}
+
+.card:hover .img-section {
+    transform: translateY(-5em);
+}
+
+
+@media screen and (min-width: 851px)  and (max-width: 1248px) {
+    .projects {
         gap: 1.2rem;
     }
 
-    .portfolio__item-title {
-        flex-direction: column;
+    .card-content {
+        top: -80px;
     }
 
-    .portfolio__item h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
+    .card:hover .img-section {
+        transform: translateY(-3em);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+    .projects {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .card-content {
+        top: -120px;
+    }
+
+    .card:hover .img-section {
+        transform: translateY(-4em);
     }
 }
 
 @media screen and (max-width: 600px) {
-    .portfolio__container {
+    .projects {
         grid-template-columns: 1fr;
         gap: 1rem;
+        justify-content: center;
+    }
+
+    .card-content {
+        top: -60px;
+    }
+
+    .card:hover .img-section {
+        transform: translateY(0);
     }
 }
-
