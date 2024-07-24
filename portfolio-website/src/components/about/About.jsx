@@ -23,7 +23,7 @@ const About = () => {
             <article className="about__card">
               <FaAward className='about__icon'/>
               <h5>Experience</h5>
-              <small>1 year as Frontend developer</small>
+              <small>1 year as Fullstack developer</small>
             </article>
 
             <article className="about__card">
@@ -40,7 +40,7 @@ const About = () => {
           </div>
 
           <p>
-            I'm a Software Engineering student and in touch with programming about almost 3 years. In academic projects, 
+            I'm a Software Engineer and in touch with programming about almost 4 years. In academic projects, 
             I've always been responsible for developed softwares Frontend, therefore in personal projects and in my 
             internship I also look for learning more and work hard on this development area. But, on the other hand I don't
             limit my knowledge on Frontend and try to know and learn more about UI/UX, Backend and Cloud/Architecture concepts too.
