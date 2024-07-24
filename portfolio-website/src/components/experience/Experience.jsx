@@ -18,7 +18,7 @@ const Experience = () => {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>HTML</h4>
-                <small className='text-light'>+3 years</small>
+                <small className='text-light'>3 years</small>
               </div>
             </article>
 
@@ -26,7 +26,7 @@ const Experience = () => {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>ReactJS</h4>
-                <small className='text-light'>+2 year</small>
+                <small className='text-light'>2 years</small>
               </div>
             </article>
 
@@ -34,7 +34,7 @@ const Experience = () => {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>JavaScript</h4>
-                <small className='text-light'>+2 year</small>
+                <small className='text-light'>2 years</small>
               </div>
             </article>
 
@@ -42,7 +42,7 @@ const Experience = () => {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>CSS</h4>
-                <small className='text-light'>+3 years</small>
+                <small className='text-light'>3 years</small>
               </div>
             </article>
 
