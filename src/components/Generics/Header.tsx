@@ -45,8 +45,22 @@ export default function Header() {
   }, []);
 
   return (
-    <Flex position="sticky" top={0} zIndex={10} backdropBlur="sm">
-      <HStack justifyContent="center" gap={4} p={4} mx="auto">
+    <Flex
+      position="sticky"
+      top={0}
+      zIndex={10}
+      backdropBlur="sm"
+      bgColor="#0a0a0a"
+    >
+      <HStack
+        justifyContent="center"
+        gap={4}
+        p={12}
+        pb={6}
+        mx="auto"
+        borderBottom="3px solid #3b3b3b9b"
+        borderRadius="60px"
+      >
         {sections.map((item) => (
           <Button
             key={item}

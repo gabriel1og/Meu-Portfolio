@@ -5,10 +5,11 @@ import profilePic from "@/public/profile.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+
 export default function About() {
   return (
     <Flex className="section" id="sobre">
-      <VStack mx="auto">
+      <VStack mx="auto" justifyContent="center">
         <VStack py={12}>
           <Image
             src={profilePic.src}
@@ -53,7 +54,7 @@ export default function About() {
           web no ecossistema Javascript.
         </Heading>
 
-        <HStack py={12}>
+        <HStack py={12} gap={6}>
           <Button p="20px 25px" fontSize="1.1rem">
             <Link
               href={"./public/Gabriel_Oliveira_Gomide_Curriculum.pdf"}
@@ -76,7 +77,7 @@ export default function About() {
               }
             }}
           >
-            Entre em contato
+            Entre em contato 👋
           </Button>
         </HStack>
       </VStack>

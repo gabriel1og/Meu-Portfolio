@@ -8,7 +8,7 @@ import { Flex } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <Flex flexDirection="column" mx="auto" px={4} py={8} gap={20}>
+    <Flex flexDirection="column" mx="auto" px={4} gap={20}>
       <About />
       <Experience />
       <Projects />
