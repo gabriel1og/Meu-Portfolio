@@ -12,7 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { Field } from "./ui/field";
-import { toaster } from "@/components/ui/toaster";
+import { Toaster, toaster } from "@/components/ui/toaster";
 import Section from "./Generics/Section";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
@@ -71,19 +71,24 @@ export default function Contact() {
         .then(
           (response) => {
             toaster.create({
-              title: "Formulário enviado!",
-              description: "Sucesso no envio do formulário!",
+              title: "Sucesso",
+              description: "Formulário enviado!",
               duration: 5000,
               type: "success",
-              placement: "bottom",
-              action: { label: "Fechar", onClick: () => console.log("Fechar") },
+              placement: "bottom-end",
+              action: { label: "x", onClick: () => console.log("Fechar") },
             });
             console.log(response.status, response.text);
             form.current?.reset();
           },
           (error) => {
-            toaster.error({
-              title: "Falha no envio do formulário!",
+            toaster.create({
+              title: "Erro!",
+              description: "Revise suas infos e envie novamente!",
+              duration: 5000,
+              type: "error",
+              placement: "bottom-end",
+              action: { label: "X", onClick: () => console.log("Fechar") },
             });
             console.log(error);
           }
@@ -157,6 +162,8 @@ export default function Contact() {
             </form>
           </Box>
         </Stack>
+
+        <Toaster />
 
         <Footer />
       </Stack>
