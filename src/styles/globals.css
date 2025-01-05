@@ -54,12 +54,6 @@ a {
   text-decoration: none;
 }
 
-.section {
-  padding: 30px;
-  height: 80vh;
-}
-
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
