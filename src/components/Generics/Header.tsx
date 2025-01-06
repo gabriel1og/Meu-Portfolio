@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Flex, HStack } from "@chakra-ui/react";
 import { scrollTo, Sections } from "@/utils/scrollBySections";
+import { ColorModeButton } from "@/components/ui/color-mode";
 
 export const sections: Sections = {
   SOBRE: "sobre",
@@ -53,7 +54,10 @@ export default function Header() {
         p={3}
         mx={{ base: 8, md: "auto" }}
         backdropFilter="blur(10px)"
-        bgColor="rgba(0, 0, 0, 0.12)"
+        bgColor={{
+          base: "rgba(255, 255, 255, 0.12)",
+          _dark: "rgba(0, 0, 0, 0.12)",
+        }}
         borderRadius="60px"
       >
         {Object.values(sections).map((item) => (
@@ -69,6 +73,7 @@ export default function Header() {
             {item}
           </Button>
         ))}
+        <ColorModeButton />
       </HStack>
     </Flex>
   );

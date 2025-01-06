@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { Provider } from "@/components/ui/provider";
+import { ColorModeProvider } from "@/components/ui/color-mode";
 import Header from "@/components/Generics/Header";
 
 export const metadata: Metadata = {
@@ -17,8 +18,10 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <body>
         <Provider>
-          <Header />
-          {children}
+          <ColorModeProvider>
+            <Header />
+            {children}
+          </ColorModeProvider>
         </Provider>
       </body>
     </html>
