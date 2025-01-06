@@ -3,16 +3,22 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Flex, HStack } from "@chakra-ui/react";
+import { scrollTo, Sections } from "@/utils/scrollBySections";
 
-const sections = ["sobre", "experiência", "projetos", "contato"];
+export const sections: Sections = {
+  SOBRE: "sobre",
+  EXPERIÊNCIA: "experiência",
+  PROJETOS: "projetos",
+  CONTATO: "contato",
+};
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState("sobre");
+  const [activeSection, setActiveSection] = useState<string>(sections.SOBRE);
 
   const handleScroll = () => {
-    const offset = 110;
+    const offset = 100;
     const buffer = 20;
-    const currentSection = sections.find((section) => {
+    const currentSection = Object.values(sections).find((section) => {
       const element = document.getElementById(section);
       if (element) {
         const rect = element.getBoundingClientRect();
@@ -22,18 +28,6 @@ export default function Header() {
     });
     if (currentSection) {
       setActiveSection(currentSection);
-    }
-  };
-
-  const scrollTo = (id: string, offset: number = 110) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = window.scrollY + element.getBoundingClientRect().top;
-      setActiveSection(id);
-      window.scrollTo({
-        top: yOffset - offset,
-        behavior: "smooth",
-      });
     }
   };
 
@@ -47,28 +41,30 @@ export default function Header() {
   return (
     <Flex
       position="sticky"
-      top={0}
+      top={5}
       zIndex={10}
       backdropBlur="sm"
-      bgColor="#0a0a0a"
+      bgColor="transparent"
     >
       <HStack
         justifyContent="center"
-        gap={4}
-        p={12}
-        pb={6}
-        mx="auto"
-        borderBottom="3px solid #3b3b3b9b"
+        wrap="wrap"
+        gap={[2, 2, 4, 4]}
+        p={3}
+        mx={{ base: 8, md: "auto" }}
+        backdropFilter="blur(10px)"
+        bgColor="rgba(0, 0, 0, 0.12)"
         borderRadius="60px"
       >
-        {sections.map((item) => (
+        {Object.values(sections).map((item) => (
           <Button
             key={item}
             variant={activeSection === item.toLowerCase() ? "solid" : "ghost"}
             onClick={() => scrollTo(item.toLowerCase())}
             textTransform="capitalize"
-            p="20px 25px"
-            fontSize="1.1rem"
+            p={{ base: "10px 15px", md: "20px 25px" }}
+            borderRadius="60px"
+            fontSize={{ base: ".9rem", md: "1rem" }}
           >
             {item}
           </Button>

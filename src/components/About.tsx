@@ -12,7 +12,7 @@ import { scrollTo } from "@/utils/scrollBySections";
 export default function About() {
   return (
     <Section sectionId="sobre">
-      <VStack position="relative" w="100%">
+      <VStack position="relative" w="100%" mb={{ base: "auto", md: 4 }}>
         <VStack pb={12}>
           <Image
             src={profilePic.src}
@@ -91,7 +91,7 @@ export default function About() {
 
         <Button
           position="absolute"
-          bottom={-20}
+          bottom={{ base: -20, md: -40 }}
           borderRadius="20px"
           bg="transparent"
           border="2px solid #fff"

@@ -10,7 +10,7 @@ export const scrollTo = (sectionId: string) => {
   if (element) {
     const yOffset = window.scrollY + element.getBoundingClientRect().top;
     window.scrollTo({
-      top: yOffset - 140,
+      top: yOffset,
       behavior: "smooth",
     });
   }
