@@ -11,16 +11,17 @@ export function ContactBox({ link, icon }: { link: string; icon: ReactNode }) {
         w="45px"
         h="45px"
         p={2}
-        color="#fff"
+        color={{ base: "#000", _dark: "white" }}
         bg="transparent"
         borderRadius="50%"
-        border="2px solid #bdbdbd"
+        border="2px solid"
+        borderColor={{ base: "#000", _dark: "#bdbdbd" }}
         transition="all 0.3s ease-in-out"
         cursor="pointer"
         _hover={{
-          color: "#000",
-          background: "#fff",
-          border: "2px solid #fff",
+          color: { base: "#fff", _dark: "#000" },
+          background: { base: "#000", _dark: "#fff" },
+          borderColor: { base: "#fff", _dark: "#000" },
           transform: "rotate(5deg) scale(1.1)",
         }}
       >
@@ -40,7 +41,7 @@ export default function Footer() {
         />
         <ContactBox link="https://github.com/gabriel1og" icon={<FaGithub />} />
       </HStack>
-      <Text color="#ffffff8f" textAlign="center">
+      <Text color={{ base: "#5a5a5a", _dark: "#ffffff8f" }} textAlign="center">
         © GABRIEL OG Portfolio. All rights reserved - 2025
       </Text>
     </VStack>

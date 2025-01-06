@@ -44,11 +44,15 @@ export default function TopButton() {
               h="45px"
               borderRadius="50%"
               cursor="pointer"
-              color="#fff"
+              color={{ base: "#000", _dark: "#fff" }}
               bg="transparent"
-              border="2px solid #fff"
+              border="2px solid"
+              borderColor={{ base: "#000", _dark: "#fff" }}
               onClick={scrollTop}
-              _hover={{ transform: "scale(1.02)" }}
+              _hover={{
+                backgroundColor: { base: "#000", _dark: "#fff" },
+                color: { base: "#fff", _dark: "#000" },
+              }}
             >
               <TiArrowUpThick className="icon" size={28} />
             </Button>

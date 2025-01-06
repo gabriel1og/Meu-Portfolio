@@ -38,11 +38,12 @@ export function SkillsBox({
       py={1}
       gap={2}
       borderRadius="30px"
-      border="2px solid #bdbdbd"
+      border="2px solid"
+      borderColor={{ base: "#ededed", _dark: "#bdbdbd" }}
       transition="all 0.3s ease-in-out"
       _hover={{
-        color: "#000",
-        background: "#fff",
+        color: { base: "#fff", _dark: "#000" },
+        background: { base: "#000", _dark: "#fff" },
         border: "2px solid #fff",
         cursor: "pointer",
         transform: "rotate(-3deg) scale(0.9)",

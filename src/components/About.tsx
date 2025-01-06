@@ -23,7 +23,8 @@ export default function About() {
           />
           <HStack
             gap={2}
-            border="3px solid #2424249b"
+            border="3px solid"
+            borderColor={{ base: "#ededed", _dark: "#2424249b" }}
             borderRadius="30px"
             p="0px 25px"
           >
@@ -93,13 +94,14 @@ export default function About() {
           position="absolute"
           bottom={{ base: -20, md: -40 }}
           borderRadius="20px"
+          color={{ base: "#000", _dark: "#fff" }}
           bg="transparent"
-          border="2px solid #fff"
-          color="#fff"
+          border="2px solid"
+          borderColor={{ base: "#000", _dark: "#fff" }}
           onClick={() => scrollTo("experiência")}
           _hover={{
-            backgroundColor: "#fff",
-            color: "#000",
+            backgroundColor: { base: "#000", _dark: "#fff" },
+            color: { base: "#fff", _dark: "#000" },
           }}
         >
           <RiArrowDownDoubleLine />

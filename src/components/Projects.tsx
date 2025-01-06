@@ -82,7 +82,12 @@ export function ProjectCard({
               </Button>
             </Link>
             <Link href={demo} target="_blank" style={{ width: "50%" }}>
-              <Button w="100%" p={5} variant="outline" borderColor="white">
+              <Button
+                w="100%"
+                p={5}
+                variant="outline"
+                borderColor={{ base: "#cdcdcd", _dark: "#fff" }}
+              >
                 Demo
               </Button>
             </Link>
