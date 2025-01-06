@@ -15,9 +15,9 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import { FaNodeJs, FaReact } from "react-icons/fa6";
 import { SiPostgresql, SiStyledcomponents, SiTypescript } from "react-icons/si";
-import crud from "@/public/crud.png";
-import jogoDaMemoria from "@/public/jogoDaMemoria.png";
-import gerenciamentoDeFinancas from "@/public/gerenciamentoDeFinancas.png";
+import crud from "@/public/assets/crud.png";
+import jogoDaMemoria from "@/public/assets/jogoDaMemoria.png";
+import gerenciamentoDeFinancas from "@/public/assets/gerenciamentoDeFinancas.png";
 
 export function ProjectCard({
   image,

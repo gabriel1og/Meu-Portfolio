@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Heading, HStack, Stack, VStack } from "@chakra-ui/react";
-import profilePic from "@/public/profile.png";
+import profilePic from "@/public/assets/profile.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -68,7 +68,7 @@ export default function About() {
           gap={{ base: 3, md: 6 }}
         >
           <Button p="20px 25px" fontSize="1.1rem">
-            <a href="./Gabriel_Oliveira_Gomide_Curriculum.pdf" download>
+            <a href="./assets/Gabriel_Oliveira_Gomide_Curriculum.pdf" download>
               <HStack>
                 Download CV <MdOutlineFileDownload />
               </HStack>
