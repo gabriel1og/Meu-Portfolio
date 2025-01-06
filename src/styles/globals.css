@@ -54,6 +54,22 @@ a {
   text-decoration: none;
 }
 
+.section {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.scrolled {
+  animation: animeLeft 1s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
