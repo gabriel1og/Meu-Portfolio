@@ -1,0 +1,43 @@
+{
+    "Header": {
+        "about": "about",
+        "experience": "experience",
+        "projects": "projects",
+        "contact": "contact"
+    },
+    "About": {
+        "available": "Available",
+        "title": "Hello, my name is",
+        "description": "I am a Fullstack Developer specializing in Front-end, graduated in Software Engineering, and focused on developing web applications in the JavaScript ecosystem.",
+        "download-cv": "Download CV",
+        "get-in-touch": "Get in touch"
+    },
+    "Experience": {
+        "title": "My professional experience",
+        "subtitle": "Experience and skills",
+        "junior-job": "Fullstack Developer",
+        "internship": "Development Intern"
+    },
+    "Projects": {
+        "title": "My projects",
+        "project-one-title": "Finance Management",
+        "project-one-description": "Project simulating a finance management dashboard with personal monetary inflows and outflows",
+        "project-two-title": "CRUD",
+        "project-two-description": "Project simulating a user registration form with name, email, phone, and date of birth",
+        "project-three-title": "Memory Game",
+        "project-three-description": "Project simulating a memory game with time tracking and move count"
+    },
+    "Contact": {
+        "title": "Get in touch with me",
+        "subtitle": "Fill out the form below",
+        "get-in-touch-card": "Get in touch",
+        "name": "Name",
+        "message": "Message",
+        "message-placeholder": "Type your message here...",
+        "submit-button": "Send",
+        "success-toast-title": "Success!",
+        "success-toast-description": "Form submitted!",
+        "error-toast-title": "Error!",
+        "error-toast-description": "Check your information and submit again!"
+    }
+}
