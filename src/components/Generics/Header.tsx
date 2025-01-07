@@ -6,6 +6,7 @@ import { Flex, HStack } from "@chakra-ui/react";
 import { scrollTo, Sections } from "@/utils/scrollBySections";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwithcer";
 
 export const sections: Sections = {
   about: "about",
@@ -75,7 +76,10 @@ export default function Header() {
             {t(item)}
           </Button>
         ))}
-        <ColorModeButton />
+        <HStack divideX="1px" divideColor="blackAlpha.200">
+          <ColorModeButton />
+          <LanguageSwitcher />
+        </HStack>
       </HStack>
     </Flex>
   );

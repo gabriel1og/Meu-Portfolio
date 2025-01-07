@@ -99,7 +99,7 @@ export default function About() {
           bg="transparent"
           border="2px solid"
           borderColor={{ base: "#000", _dark: "#fff" }}
-          onClick={() => scrollTo("experiência")}
+          onClick={() => scrollTo("experience")}
           _hover={{
             backgroundColor: { base: "#000", _dark: "#fff" },
             color: { base: "#fff", _dark: "#000" },

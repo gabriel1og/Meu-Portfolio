@@ -43,6 +43,21 @@ a {
   animation: animeLeft 1s forwards;
 }
 
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-inline: 10px;
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  outline: none;
+}
+
 @keyframes animeLeft {
   to {
     opacity: initial;
