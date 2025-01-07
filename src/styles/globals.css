@@ -49,9 +49,15 @@ a {
   appearance: none;
   border: none;
   outline: none;
-  background: transparent;
   padding-inline: 10px;
   cursor: pointer;
+  color: #2362cf;
+  background: -webkit-linear-gradient(right, #3a21f3, #085aff, #2362cf, #44bbee);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .custom-select:focus {
