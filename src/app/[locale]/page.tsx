@@ -1,5 +1,6 @@
 "use client";
 
+import Header from "@/components/Generics/Header";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
@@ -15,7 +16,10 @@ export default function Home() {
       mx="auto"
       px={{ base: 6, md: 4 }}
     >
+      <Header />
+
       <TopButton />
+
       <About />
       <Experience />
       <Projects />
