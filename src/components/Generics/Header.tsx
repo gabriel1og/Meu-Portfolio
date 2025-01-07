@@ -5,16 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Flex, HStack } from "@chakra-ui/react";
 import { scrollTo, Sections } from "@/utils/scrollBySections";
 import { ColorModeButton } from "@/components/ui/color-mode";
+import { useTranslations } from "next-intl";
 
 export const sections: Sections = {
-  SOBRE: "sobre",
-  EXPERIÊNCIA: "experiência",
-  PROJETOS: "projetos",
-  CONTATO: "contato",
+  about: "about",
+  experience: "experience",
+  projects: "projects",
+  contact: "contact",
 };
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState<string>(sections.SOBRE);
+  const [activeSection, setActiveSection] = useState<string>(sections.about);
+  const t = useTranslations("Header");
 
   const handleScroll = () => {
     const offset = 100;
@@ -70,7 +72,7 @@ export default function Header() {
             borderRadius="60px"
             fontSize={{ base: ".9rem", md: "1rem" }}
           >
-            {item}
+            {t(item)}
           </Button>
         ))}
         <ColorModeButton />

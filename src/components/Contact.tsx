@@ -19,6 +19,7 @@ import emailjs from "@emailjs/browser";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import Footer from "./Generics/Footer";
+import { useTranslations } from "next-intl";
 
 export function ContactCard({
   icon,
@@ -31,6 +32,8 @@ export function ContactCard({
   value: string;
   link: string;
 }) {
+  const t = useTranslations("Contact");
+
   return (
     <Card.Root w="100%" maxW={["100%", "100%", "100%", "350px"]} p={6} gap={4}>
       <Card.Title mx="auto">{icon}</Card.Title>
@@ -50,7 +53,7 @@ export function ContactCard({
           style={{ color: "#085aff", fontWeight: 500 }}
           target="_blank"
         >
-          Entre em contato
+          {t("get-in-touch-card")}
         </Link>
       </Card.Footer>
     </Card.Root>
@@ -59,6 +62,7 @@ export function ContactCard({
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
+  const t = useTranslations("Contact");
 
   const sendEmail = (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
     e.preventDefault();
@@ -71,8 +75,8 @@ export default function Contact() {
         .then(
           (response) => {
             toaster.create({
-              title: "Sucesso",
-              description: "Formulário enviado!",
+              title: t("success-toast-title"),
+              description: t("success-toast-description"),
               duration: 5000,
               type: "success",
               placement: "bottom-end",
@@ -83,8 +87,8 @@ export default function Contact() {
           },
           (error) => {
             toaster.create({
-              title: "Erro!",
-              description: "Revise suas infos e envie novamente!",
+              title: t("error-toast-title"),
+              description: t("error-toast-description"),
               duration: 5000,
               type: "error",
               placement: "bottom-end",
@@ -99,10 +103,10 @@ export default function Contact() {
   };
 
   return (
-    <Section sectionId="contato" title="Entre em contato comigo">
+    <Section sectionId="contact" title={t("title")}>
       <Stack direction="column" gap={24} w="100%">
         <Heading textAlign="center" fontSize="1.2rem" color="#8f8f8f" mt={-2}>
-          Preencha o formulário abaixo
+          {t("subtitle")}
         </Heading>
 
         <Stack
@@ -136,7 +140,7 @@ export default function Contact() {
 
           <Box w={{ base: "100%", md: "50%" }}>
             <form ref={form} onSubmit={sendEmail}>
-              <Field label="Nome" required>
+              <Field label={t("name")} required>
                 <Input name="name" type="text" p={2} />
               </Field>
 
@@ -144,12 +148,12 @@ export default function Contact() {
                 <Input name="email" type="email" p={2} />
               </Field>
 
-              <Field label="Mensagem" required mt={4}>
+              <Field label={t("message")} required mt={4}>
                 <Textarea
                   id="message"
                   name="message"
                   size="lg"
-                  placeholder="Digite sua mensagem aqui..."
+                  placeholder={t("message-placeholder")}
                   p={2}
                   minH="100px"
                   maxH="200px"
@@ -157,7 +161,7 @@ export default function Contact() {
               </Field>
 
               <Button type="submit" w="100%" mt={4}>
-                Enviar
+                {t("submit-button")}
               </Button>
             </form>
           </Box>

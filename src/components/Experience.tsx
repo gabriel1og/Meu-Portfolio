@@ -21,6 +21,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
+import { useTranslations } from "next-intl";
 
 export function SkillsBox({
   skillIcon,
@@ -56,11 +57,13 @@ export function SkillsBox({
 }
 
 export default function Experience() {
+  const t = useTranslations("Experience");
+
   return (
-    <Section title="Minha experiência profissional" sectionId="experiência">
+    <Section title={t("title")} sectionId="experience">
       <Stack direction="column" gap={24} w="100%">
         <Heading textAlign="center" fontSize="1.2rem" color="#8f8f8f" mt={-2}>
-          Experiências e habilidades
+          {t("subtitle")}
         </Heading>
 
         <Stack direction="row" flexWrap="wrap" justifyContent="center" gap={3}>
@@ -86,7 +89,7 @@ export default function Experience() {
 
             <TimelineContent flex="1">
               <TimelineTitle fontSize={{ base: "1rem", md: "1.2rem" }}>
-                Desenvolvedor Fullstack
+                {t("junior-job")}
               </TimelineTitle>
 
               <TimelineDescription
@@ -107,7 +110,7 @@ export default function Experience() {
           <TimelineItem>
             <TimelineContent flex="1" alignItems="flex-end">
               <TimelineTitle fontSize={{ base: "1rem", md: "1.2rem" }}>
-                Estagiário em Desenvolvimento
+                {t("internship")}
               </TimelineTitle>
 
               <TimelineDescription pb={4}>

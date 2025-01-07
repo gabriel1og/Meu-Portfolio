@@ -8,10 +8,13 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import Section from "./Generics/Section";
 import { RiArrowDownDoubleLine } from "react-icons/ri";
 import { scrollTo } from "@/utils/scrollBySections";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations("About");
+
   return (
-    <Section sectionId="sobre">
+    <Section sectionId="about">
       <VStack position="relative" w="100%" mb={{ base: "auto", md: 4 }}>
         <VStack pb={12}>
           <Image
@@ -34,12 +37,12 @@ export default function About() {
               height="10px"
               borderRadius="lg"
             />
-            <Heading fontSize=".9rem">Disponível</Heading>
+            <Heading fontSize=".9rem">{t("available")}</Heading>
           </HStack>
         </VStack>
 
         <Heading fontSize={{ base: "1.4rem", md: "1.6rem" }} textAlign="center">
-          Olá, me chamo{" "}
+          {t("title")}{" "}
           <span
             style={{
               textDecoration: "underline",
@@ -52,14 +55,12 @@ export default function About() {
         </Heading>
 
         <Heading
-          fontSize={{ base: ".9rem", md: "1.2rem" }}
+          fontSize={{ base: ".9rem", md: "1.1rem" }}
           color="gray"
           textAlign="center"
           lineHeight={{ base: "25px", md: "30px" }}
         >
-          Sou Desenvolvedor Fullstack especializado em Front-end, <br /> formado
-          em Engenharia de Software e focado em desenvolver <br /> aplicações
-          web no ecossistema Javascript.
+          {t("description")}
         </Heading>
 
         <Stack
@@ -70,7 +71,7 @@ export default function About() {
           <Button p="20px 25px" fontSize="1.1rem">
             <a href="./assets/Gabriel_Oliveira_Gomide_Curriculum.pdf" download>
               <HStack>
-                Download CV <MdOutlineFileDownload />
+                {t("download-cv")} <MdOutlineFileDownload />
               </HStack>
             </a>
           </Button>
@@ -86,7 +87,7 @@ export default function About() {
               }
             }}
           >
-            Entre em contato 👋
+            {t("get-in-touch")} 👋
           </Button>
         </Stack>
 

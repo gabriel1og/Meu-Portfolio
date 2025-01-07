@@ -1,8 +1,8 @@
 export interface Sections {
-  SOBRE: "sobre";
-  EXPERIÊNCIA: "experiência";
-  PROJETOS: "projetos";
-  CONTATO: "contato";
+  about: "about";
+  experience: "experience";
+  projects: "projects";
+  contact: "contact";
 }
 
 export const scrollTo = (sectionId: string) => {

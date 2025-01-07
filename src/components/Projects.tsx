@@ -18,6 +18,7 @@ import { SiPostgresql, SiStyledcomponents, SiTypescript } from "react-icons/si";
 import crud from "@/public/assets/crud.png";
 import jogoDaMemoria from "@/public/assets/jogoDaMemoria.png";
 import gerenciamentoDeFinancas from "@/public/assets/gerenciamentoDeFinancas.png";
+import { useTranslations } from "next-intl";
 
 export function ProjectCard({
   image,
@@ -99,8 +100,10 @@ export function ProjectCard({
 }
 
 export default function Projects() {
+  const t = useTranslations("Projects");
+
   return (
-    <Section title="Meus projetos" sectionId="projetos" props={{ gap: 20 }}>
+    <Section title={t("title")} sectionId="projects" props={{ gap: 20 }}>
       <Grid
         w="100%"
         gap={4}
@@ -119,10 +122,8 @@ export default function Projects() {
       >
         <ProjectCard
           image={gerenciamentoDeFinancas}
-          title={"Gerenciamento de Finanças"}
-          description={
-            "Projeto que simula um dashboard de gerenciamento de finanças com entradas e saídas de fluxos monetários pessoais"
-          }
+          title={t("project-one-title")}
+          description={t("project-one-description")}
           technologies={
             <HStack gap={4}>
               <FaReact size={36} />
@@ -136,10 +137,8 @@ export default function Projects() {
 
         <ProjectCard
           image={crud}
-          title={"CRUD"}
-          description={
-            "Projeto que simula um formulário de registro de usuário com nome, email, telefone e data de nascimento"
-          }
+          title={t("project-two-title")}
+          description={t("project-two-description")}
           technologies={
             <HStack gap={4}>
               <FaReact size={36} />
@@ -153,10 +152,8 @@ export default function Projects() {
 
         <ProjectCard
           image={jogoDaMemoria}
-          title={"Jogo da Memória"}
-          description={
-            "Projeto que simula um jogo da memória com registro de tempo e número de movimentos"
-          }
+          title={t("project-three-title")}
+          description={t("project-three-description")}
           technologies={
             <HStack gap={4}>
               <FaReact size={36} />
