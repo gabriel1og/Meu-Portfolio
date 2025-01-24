@@ -22,6 +22,8 @@
         "title": "Meus projetos",
         "ecomm-project-title": "PetShop Ecommerce",
         "ecomm-project-description": "Projeto que representa um ecommerce de petshop, com produtos e serviços relacionados, dashboard para administradores e páginas referentes à conta do usuário e ao carrinho.",
+        "taxi-lp-project-title": "Landing Page - Transporte adaptado para cadeirantes",
+        "taxi-lp-project-description": "Landing Page para agendamento de corridas de táxi com atendimento adaptado para pessoas cadeirantes.",
         "finances-project-title": "Gerenciamento de Finanças",
         "finances-project-description": "Projeto que simula um dashboard de gerenciamento de finanças com entradas e saídas de fluxos monetários pessoais",
         "crud-project-title": "CRUD",

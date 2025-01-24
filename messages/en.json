@@ -22,6 +22,8 @@
         "title": "My projects",
         "ecomm-project-title": "PetShop Ecommerce",
         "ecomm-project-description": "Project representing a petshop ecommerce, with related products and services, dashboard for admin and also user account and cart pages.",
+        "taxi-lp-project-title": "Landing Page - Adapted Transportation for Wheelchair Users",
+        "taxi-lp-project-description": "Landing Page for booking taxi rides with services adapted for wheelchair users.",
         "finances-project-title": "Finance Management",
         "finances-project-description": "Project simulating a finance management dashboard with personal monetary inflows and outflows",
         "crud-project-title": "CRUD",

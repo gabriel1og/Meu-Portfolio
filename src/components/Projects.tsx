@@ -24,6 +24,7 @@ import crud from "@/public/assets/crud.png";
 import jogoDaMemoria from "@/public/assets/jogoDaMemoria.png";
 import gerenciamentoDeFinancas from "@/public/assets/gerenciamentoDeFinancas.png";
 import petshopEcomm from "@/public/assets/petshopEcomm.png";
+import transporteLP from "@/public/assets/transporteLP.png";
 import { useTranslations } from "next-intl";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -34,7 +35,6 @@ export function ProjectCard({
   technologies,
   github,
   demo,
-  firstAndLastCard,
 }: {
   image: StaticImageData;
   title: string;
@@ -42,14 +42,9 @@ export function ProjectCard({
   technologies: ReactNode;
   github: string;
   demo: string;
-  firstAndLastCard?: boolean;
 }) {
   return (
-    <GridItem
-      w="100%"
-      maxW={["100%", "100%", "100%", firstAndLastCard ? "100%" : "380px"]}
-      colSpan={[1, 1, 1, firstAndLastCard ? 2 : 1]}
-    >
+    <GridItem w="100%" maxW="100%" colSpan={1}>
       <VStack
         w="100%"
         justifyContent="center"
@@ -118,13 +113,7 @@ export default function Projects() {
           "repeat(1, 1fr)",
           "repeat(1, 1fr)",
           "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
-        ]}
-        templateRows={[
-          "repeat(4, 1fr)",
-          "repeat(4, 1fr)",
-          "repeat(4, 1fr)",
-          "repeat(2, 1fr)",
+          "repeat(1, 1fr)",
         ]}
       >
         <ProjectCard
@@ -141,7 +130,26 @@ export default function Projects() {
           }
           github={"https://github.com/gabriel1og/ecommerce"}
           demo={"https://ecommerce-petzone.vercel.app/"}
-          firstAndLastCard
+        />
+
+        <ProjectCard
+          image={transporteLP}
+          title={t("taxi-lp-project-title")}
+          description={t("taxi-lp-project-description")}
+          technologies={
+            <HStack gap={4}>
+              <FaReact size={36} />
+              <RiNextjsFill size={36} />
+              <SiTypescript size={36} />
+              <SiChakraui size={36} />
+            </HStack>
+          }
+          github={
+            "https://github.com/gabriel1og/rodrigo-transporte-adaptado-para-cadeirantes"
+          }
+          demo={
+            "https://rodrigo-transporte-adaptado-para-cadeirantes.vercel.app/"
+          }
         />
 
         <ProjectCard
@@ -187,7 +195,6 @@ export default function Projects() {
           }
           github={"https://github.com/gabriel1og/Memory-Game-Project"}
           demo={"https://memory-game-project-mu.vercel.app/"}
-          firstAndLastCard
         />
       </Grid>
     </Section>
