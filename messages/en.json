@@ -20,12 +20,14 @@
     },
     "Projects": {
         "title": "My projects",
-        "project-one-title": "Finance Management",
-        "project-one-description": "Project simulating a finance management dashboard with personal monetary inflows and outflows",
-        "project-two-title": "CRUD",
-        "project-two-description": "Project simulating a user registration form with name, email, phone, and date of birth",
-        "project-three-title": "Memory Game",
-        "project-three-description": "Project simulating a memory game with time tracking and move count"
+        "ecomm-project-title": "PetShop Ecommerce",
+        "ecomm-project-description": "Project representing a petshop ecommerce, with related products and services, dashboard for admin and also user account and cart pages.",
+        "finances-project-title": "Finance Management",
+        "finances-project-description": "Project simulating a finance management dashboard with personal monetary inflows and outflows",
+        "crud-project-title": "CRUD",
+        "crud-project-description": "Project simulating a user registration form with name, email, phone, and date of birth",
+        "memory-game-project-title": "Memory Game",
+        "memory-game-project-description": "Project simulating a memory game with time tracking and move count"
     },
     "Contact": {
         "title": "Get in touch with me",
