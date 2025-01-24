@@ -14,11 +14,18 @@ import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import Link from "next/link";
 import { FaNodeJs, FaReact } from "react-icons/fa6";
-import { SiPostgresql, SiStyledcomponents, SiTypescript } from "react-icons/si";
+import {
+  SiChakraui,
+  SiPostgresql,
+  SiStyledcomponents,
+  SiTypescript,
+} from "react-icons/si";
 import crud from "@/public/assets/crud.png";
 import jogoDaMemoria from "@/public/assets/jogoDaMemoria.png";
 import gerenciamentoDeFinancas from "@/public/assets/gerenciamentoDeFinancas.png";
+import petshopEcomm from "@/public/assets/petshopEcomm.png";
 import { useTranslations } from "next-intl";
+import { RiNextjsFill } from "react-icons/ri";
 
 export function ProjectCard({
   image,
@@ -27,7 +34,7 @@ export function ProjectCard({
   technologies,
   github,
   demo,
-  lastCard,
+  firstAndLastCard,
 }: {
   image: StaticImageData;
   title: string;
@@ -35,13 +42,13 @@ export function ProjectCard({
   technologies: ReactNode;
   github: string;
   demo: string;
-  lastCard?: boolean;
+  firstAndLastCard?: boolean;
 }) {
   return (
     <GridItem
       w="100%"
-      maxW={["100%", "100%", "100%", lastCard ? "100%" : "380px"]}
-      colSpan={[1, 1, 1, lastCard ? 2 : 1]}
+      maxW={["100%", "100%", "100%", firstAndLastCard ? "100%" : "380px"]}
+      colSpan={[1, 1, 1, firstAndLastCard ? 2 : 1]}
     >
       <VStack
         w="100%"
@@ -114,16 +121,33 @@ export default function Projects() {
           "repeat(2, 1fr)",
         ]}
         templateRows={[
-          "repeat(3, 1fr)",
-          "repeat(3, 1fr)",
-          "repeat(3, 1fr)",
+          "repeat(4, 1fr)",
+          "repeat(4, 1fr)",
+          "repeat(4, 1fr)",
           "repeat(2, 1fr)",
         ]}
       >
         <ProjectCard
+          image={petshopEcomm}
+          title={t("ecomm-project-title")}
+          description={t("ecomm-project-description")}
+          technologies={
+            <HStack gap={4}>
+              <FaReact size={36} />
+              <RiNextjsFill size={36} />
+              <SiTypescript size={36} />
+              <SiChakraui size={36} />
+            </HStack>
+          }
+          github={"https://github.com/gabriel1og/ecommerce"}
+          demo={"https://ecommerce-petzone.vercel.app/"}
+          firstAndLastCard
+        />
+
+        <ProjectCard
           image={gerenciamentoDeFinancas}
-          title={t("project-one-title")}
-          description={t("project-one-description")}
+          title={t("finances-project-title")}
+          description={t("finances-project-description")}
           technologies={
             <HStack gap={4}>
               <FaReact size={36} />
@@ -137,8 +161,8 @@ export default function Projects() {
 
         <ProjectCard
           image={crud}
-          title={t("project-two-title")}
-          description={t("project-two-description")}
+          title={t("crud-project-title")}
+          description={t("crud-project-description")}
           technologies={
             <HStack gap={4}>
               <FaReact size={36} />
@@ -152,8 +176,8 @@ export default function Projects() {
 
         <ProjectCard
           image={jogoDaMemoria}
-          title={t("project-three-title")}
-          description={t("project-three-description")}
+          title={t("memory-game-project-title")}
+          description={t("memory-game-project-description")}
           technologies={
             <HStack gap={4}>
               <FaReact size={36} />
@@ -163,7 +187,7 @@ export default function Projects() {
           }
           github={"https://github.com/gabriel1og/Memory-Game-Project"}
           demo={"https://memory-game-project-mu.vercel.app/"}
-          lastCard
+          firstAndLastCard
         />
       </Grid>
     </Section>
