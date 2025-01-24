@@ -69,7 +69,10 @@ export default function About() {
           gap={{ base: 3, md: 6 }}
         >
           <Button p="20px 25px" fontSize="1.1rem">
-            <a href="./assets/Gabriel_Oliveira_Gomide_Curriculum.pdf" download>
+            <a
+              href="./assets/Gabriel_Oliveira_Gomide_Curriculum2025.pdf"
+              download
+            >
               <HStack>
                 {t("download-cv")} <MdOutlineFileDownload />
               </HStack>
