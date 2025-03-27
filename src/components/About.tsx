@@ -84,7 +84,7 @@ export default function About() {
             p="20px 25px"
             fontSize="1.1rem"
             onClick={() => {
-              const element = document.getElementById("contato");
+              const element = document.getElementById("contact");
               if (element) {
                 element.scrollIntoView({ behavior: "smooth" });
               }
