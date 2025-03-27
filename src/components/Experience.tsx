@@ -82,6 +82,30 @@ export default function Experience() {
 
         <TimelineRoot variant="outline" size="xl" w="100%" maxW="1200px">
           <TimelineItem>
+            <TimelineContent flex="1" alignItems="flex-end">
+              <TimelineTitle fontSize={{ base: "1rem", md: "1.2rem" }}>
+                {t("frontend-job")}
+              </TimelineTitle>
+
+              <TimelineDescription pb={4}>
+                <Text fontSize={{ base: ".8rem", md: ".9rem" }}>
+                  Seidor | 02/2025 - {t("current")}
+                </Text>
+              </TimelineDescription>
+
+              <List.Root gap={1} fontSize={{ base: ".9rem", md: "1rem" }}>
+                <List.Item>CSS, React, NextJs, Typescript</List.Item>
+                <List.Item>Github, GitHub Projects</List.Item>
+              </List.Root>
+            </TimelineContent>
+
+            <TimelineConnector>
+              <LuCircleCheck size={32} />
+            </TimelineConnector>
+            <TimelineContent flex="1" />
+          </TimelineItem>
+
+          <TimelineItem>
             <TimelineContent flex="1" />
             <TimelineConnector>
               <LuCircleCheck size={32} />
