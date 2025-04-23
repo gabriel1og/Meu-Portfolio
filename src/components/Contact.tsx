@@ -79,7 +79,6 @@ export default function Contact() {
               description: t("success-toast-description"),
               duration: 5000,
               type: "success",
-              placement: "bottom-end",
               action: { label: "x", onClick: () => console.log("Fechar") },
             });
             console.log(response.status, response.text);
@@ -91,7 +90,6 @@ export default function Contact() {
               description: t("error-toast-description"),
               duration: 5000,
               type: "error",
-              placement: "bottom-end",
               action: { label: "X", onClick: () => console.log("Fechar") },
             });
             console.log(error);
