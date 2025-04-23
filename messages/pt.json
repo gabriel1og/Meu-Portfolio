@@ -1,0 +1,49 @@
+{
+    "Header": {
+        "about": "sobre",
+        "experience": "experiência",
+        "projects": "projetos",
+        "contact": "contato"
+    },
+    "About": {
+        "available": "Disponível",
+        "title": "Olá, me chamo",
+        "description": "Sou Desenvolvedor Fullstack especializado em Front-end, formado em Engenharia de Software e focado em desenvolver aplicações web no ecossistema Javascript.",
+        "download-cv": "Baixar CV",
+        "get-in-touch": "Entre em contato"
+    },
+    "Experience": {
+        "title": "Minha experiência profissional",
+        "subtitle": "Experiências e habilidades",
+        "current": "Atual",
+        "frontend-job": "Desenvolvedor Frontend",
+        "junior-job": "Desenvolvedor Fullstack",
+        "internship": "Estagiário em Desenvolvimento"
+    },
+    "Projects": {
+        "title": "Meus projetos",
+        "ecomm-project-title": "PetShop Ecommerce",
+        "ecomm-project-description": "Projeto que representa um ecommerce de petshop, com produtos e serviços relacionados, dashboard para administradores e páginas referentes à conta do usuário e ao carrinho.",
+        "taxi-lp-project-title": "Landing Page - Transporte adaptado para cadeirantes",
+        "taxi-lp-project-description": "Landing Page para agendamento de corridas de táxi com atendimento adaptado para pessoas cadeirantes.",
+        "finances-project-title": "Gerenciamento de Finanças",
+        "finances-project-description": "Projeto que simula um dashboard de gerenciamento de finanças com entradas e saídas de fluxos monetários pessoais",
+        "crud-project-title": "CRUD",
+        "crud-project-description": "Projeto que simula um formulário de registro de usuário com nome, email, telefone e data de nascimento",
+        "memory-game-project-title": "Jogo da Memória",
+        "memory-game-project-description": "Projeto que simula um jogo da memória com registro de tempo e número de movimentos"
+    },
+    "Contact": {
+        "title": "Entre em contato comigo",
+        "subtitle": "Preencha o formulário abaixo",
+        "get-in-touch-card": "Entre em contato",
+        "name": "Nome",
+        "message": "Mensagem",
+        "message-placeholder": "Digite sua mensagem aqui...",
+        "submit-button": "Enviar",
+        "success-toast-title": "Sucesso!",
+        "success-toast-description": "Formulário enviado!",
+        "error-toast-title": "Erro!",
+        "error-toast-description": "Revise suas infos e envie novamente!"
+    }
+}
