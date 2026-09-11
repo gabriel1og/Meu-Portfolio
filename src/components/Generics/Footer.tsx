@@ -42,7 +42,7 @@ export default function Footer() {
         <ContactBox link="https://github.com/gabriel1og" icon={<FaGithub />} />
       </HStack>
       <Text color={{ base: "#5a5a5a", _dark: "#ffffff8f" }} textAlign="center">
-        © GABRIEL OG Portfolio. All rights reserved - 2025
+        © GABRIEL OG Portfolio. All rights reserved - 2026
       </Text>
     </VStack>
   );

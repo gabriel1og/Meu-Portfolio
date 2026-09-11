@@ -44,6 +44,8 @@ export default function Header() {
 
   return (
     <Flex
+      as="header"
+      id="site-header"
       position="sticky"
       top={5}
       zIndex={10}
