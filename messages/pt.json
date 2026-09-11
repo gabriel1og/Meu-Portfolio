@@ -17,8 +17,29 @@
         "subtitle": "Experiências e habilidades",
         "current": "Atual",
         "frontend-job": "Desenvolvedor Frontend",
+        "frontend-job-details": [
+            "React, TypeScript, Styled Components e Design System",
+            "Arquitetura de microfrontends, integração com APIs REST e internacionalização",
+            "Testes com Jest, Testing Library e MSW; colaboração com Git e GitHub"
+        ],
+        "volunteer-job": "Desenvolvedor Frontend Voluntário",
+        "volunteer-job-details": [
+            "React, Next.js, TypeScript, Tailwind CSS e shadcn/ui",
+            "Interfaces responsivas com foco em performance e acessibilidade",
+            "Desenvolvimento colaborativo de plataforma e landing page"
+        ],
         "junior-job": "Desenvolvedor Fullstack",
-        "internship": "Estagiário em Desenvolvimento"
+        "junior-job-details": [
+            "React, Next.js, TypeScript e Chakra UI",
+            "Node.js, NestJS, PostgreSQL e APIs REST",
+            "Desenvolvimento full stack e integração entre frontend e backend"
+        ],
+        "internship": "Estagiário em Desenvolvimento",
+        "internship-details": [
+            "HTML, CSS, JavaScript, React e Next.js",
+            "WordPress com Elementor e criação de interfaces responsivas",
+            "Git, GitHub, manutenção de produtos e colaboração em equipe"
+        ]
     },
     "Projects": {
         "title": "Meus projetos",
@@ -26,12 +47,10 @@
         "ecomm-project-description": "Projeto que representa um ecommerce de petshop, com produtos e serviços relacionados, dashboard para administradores e páginas referentes à conta do usuário e ao carrinho.",
         "taxi-lp-project-title": "Landing Page - Transporte adaptado para cadeirantes",
         "taxi-lp-project-description": "Landing Page para agendamento de corridas de táxi com atendimento adaptado para pessoas cadeirantes.",
-        "finances-project-title": "Gerenciamento de Finanças",
-        "finances-project-description": "Projeto que simula um dashboard de gerenciamento de finanças com entradas e saídas de fluxos monetários pessoais",
-        "crud-project-title": "CRUD",
-        "crud-project-description": "Projeto que simula um formulário de registro de usuário com nome, email, telefone e data de nascimento",
-        "memory-game-project-title": "Jogo da Memória",
-        "memory-game-project-description": "Projeto que simula um jogo da memória com registro de tempo e número de movimentos"
+        "finances-project-title": "Flowly - Finanças Pessoais",
+        "finances-project-description": "Aplicação full stack para organizar finanças pessoais, com autenticação, orçamento mensal, gestão e filtros de transações, dashboards e relatórios.",
+        "tasks-status-project-title": "Gerenciamento de Status",
+        "tasks-status-project-description": "Aplicação para centralizar tarefas, sprints, status e ambientes, com cadastro, edição inline, filtros, ordenação e links operacionais."
     },
     "Contact": {
         "title": "Entre em contato comigo",

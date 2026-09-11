@@ -13,17 +13,17 @@ import Section from "./Generics/Section";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import Link from "next/link";
-import { FaNodeJs, FaReact } from "react-icons/fa6";
+import { FaChartLine, FaReact } from "react-icons/fa6";
 import {
   SiChakraui,
-  SiPostgresql,
-  SiStyledcomponents,
+  SiShadcnui,
+  SiSupabase,
+  SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import crud from "@/public/assets/crud.png";
-import jogoDaMemoria from "@/public/assets/jogoDaMemoria.png";
-import gerenciamentoDeFinancas from "@/public/assets/gerenciamentoDeFinancas.png";
+import flowly from "@/public/assets/flowly.png";
 import petshopEcomm from "@/public/assets/petshopEcomm.png";
+import tasksStatus from "@/public/assets/taskStatus.png";
 import transporteLP from "@/public/assets/transporteLP.png";
 import { useTranslations } from "next-intl";
 import { RiNextjsFill } from "react-icons/ri";
@@ -35,13 +35,15 @@ export function ProjectCard({
   technologies,
   github,
   demo,
+  imageFit = "cover",
 }: {
   image: StaticImageData;
   title: string;
   description: string;
   technologies: ReactNode;
   github: string;
-  demo: string;
+  demo?: string;
+  imageFit?: "cover" | "contain";
 }) {
   return (
     <GridItem w="100%" maxW="100%" colSpan={1}>
@@ -59,6 +61,9 @@ export function ProjectCard({
           h="200px"
           src={image.src}
           alt={title}
+          objectFit={imageFit}
+          bg={{ base: "#f8fafc", _dark: "#111827" }}
+          p={imageFit === "contain" ? 6 : 0}
         />
       </VStack>
 
@@ -76,24 +81,32 @@ export function ProjectCard({
           <Card.Title>{title}</Card.Title>
           <Card.Description textAlign="center">{description}</Card.Description>
 
-          <HStack my={8}>{technologies}</HStack>
+          <HStack my={8} flexWrap="wrap" justifyContent="center">
+            {technologies}
+          </HStack>
 
           <HStack gap={2} w="100%">
-            <Link href={github} target="_blank" style={{ width: "50%" }}>
+            <Link
+              href={github}
+              target="_blank"
+              style={{ width: demo ? "50%" : "100%" }}
+            >
               <Button w="100%" p={5}>
                 GitHub
               </Button>
             </Link>
-            <Link href={demo} target="_blank" style={{ width: "50%" }}>
-              <Button
-                w="100%"
-                p={5}
-                variant="outline"
-                borderColor={{ base: "#cdcdcd", _dark: "#fff" }}
-              >
-                Demo
-              </Button>
-            </Link>
+            {demo && (
+              <Link href={demo} target="_blank" style={{ width: "50%" }}>
+                <Button
+                  w="100%"
+                  p={5}
+                  variant="outline"
+                  borderColor={{ base: "#cdcdcd", _dark: "#fff" }}
+                >
+                  Demo
+                </Button>
+              </Link>
+            )}
           </HStack>
         </VStack>
       </Card.Root>
@@ -117,19 +130,53 @@ export default function Projects() {
         ]}
       >
         <ProjectCard
+          image={flowly}
+          title={t("finances-project-title")}
+          description={t("finances-project-description")}
+          technologies={
+            <HStack gap={4}>
+              <RiNextjsFill size={36} title="Next.js" />
+              <SiTypescript size={36} title="Typescript" />
+              <SiSupabase size={36} title="Supabase" />
+              <SiTailwindcss size={36} title="Tailwind CSS" />
+              <FaChartLine size={36} title="Recharts" />
+            </HStack>
+          }
+          github="https://github.com/gabriel1og/my-finances"
+          demo="https://my-finances-seven-delta.vercel.app"
+        />
+
+        <ProjectCard
+          image={tasksStatus}
+          title={t("tasks-status-project-title")}
+          description={t("tasks-status-project-description")}
+          technologies={
+            <HStack gap={4}>
+              <RiNextjsFill size={36} title="Next.js" />
+              <SiTypescript size={36} title="Typescript" />
+              <SiSupabase size={36} title="Supabase" />
+              <SiTailwindcss size={36} title="Tailwind CSS" />
+              <SiShadcnui size={36} title="Shadcn UI" />
+            </HStack>
+          }
+          github="https://github.com/gabriel1og/tasks-status"
+          demo="https://tasks-status.vercel.app"
+        />
+
+        <ProjectCard
           image={petshopEcomm}
           title={t("ecomm-project-title")}
           description={t("ecomm-project-description")}
           technologies={
             <HStack gap={4}>
-              <FaReact size={36} />
-              <RiNextjsFill size={36} />
-              <SiTypescript size={36} />
-              <SiChakraui size={36} />
+              <FaReact size={36} title="React" />
+              <RiNextjsFill size={36} title="Next.js" />
+              <SiTypescript size={36} title="Typescript" />
+              <SiChakraui size={36} title="Chakra UI" />
             </HStack>
           }
           github={"https://github.com/gabriel1og/ecommerce"}
-          demo={"https://ecommerce-petzone.vercel.app/"}
+          demo={"https://ecommerce-petzone.vercel.app"}
         />
 
         <ProjectCard
@@ -138,63 +185,18 @@ export default function Projects() {
           description={t("taxi-lp-project-description")}
           technologies={
             <HStack gap={4}>
-              <FaReact size={36} />
-              <RiNextjsFill size={36} />
-              <SiTypescript size={36} />
-              <SiChakraui size={36} />
+              <FaReact size={36} title="React" />
+              <RiNextjsFill size={36} title="Next.js" />
+              <SiTypescript size={36} title="Typescript" />
+              <SiChakraui size={36} title="Chakra UI" />
             </HStack>
           }
           github={
             "https://github.com/gabriel1og/rodrigo-transporte-adaptado-para-cadeirantes"
           }
           demo={
-            "https://rodrigo-transporte-adaptado-para-cadeirantes.vercel.app/"
+            "https://rodrigo-transporte-adaptado-para-cadeirantes.vercel.app"
           }
-        />
-
-        <ProjectCard
-          image={gerenciamentoDeFinancas}
-          title={t("finances-project-title")}
-          description={t("finances-project-description")}
-          technologies={
-            <HStack gap={4}>
-              <FaReact size={36} />
-              <SiTypescript size={36} />
-              <SiStyledcomponents size={36} />
-            </HStack>
-          }
-          github={"https://github.com/gabriel1og/Finances-Management"}
-          demo={"https://finances-management-beta.vercel.app/"}
-        />
-
-        <ProjectCard
-          image={crud}
-          title={t("crud-project-title")}
-          description={t("crud-project-description")}
-          technologies={
-            <HStack gap={4}>
-              <FaReact size={36} />
-              <FaNodeJs size={36} />
-              <SiPostgresql size={36} />
-            </HStack>
-          }
-          github={"https://github.com/gabriel1og/CRUD-System"}
-          demo={"https://crud-system-henna.vercel.app/"}
-        />
-
-        <ProjectCard
-          image={jogoDaMemoria}
-          title={t("memory-game-project-title")}
-          description={t("memory-game-project-description")}
-          technologies={
-            <HStack gap={4}>
-              <FaReact size={36} />
-              <SiTypescript size={36} />
-              <SiStyledcomponents size={36} />
-            </HStack>
-          }
-          github={"https://github.com/gabriel1og/Memory-Game-Project"}
-          demo={"https://memory-game-project-mu.vercel.app/"}
         />
       </Grid>
     </Section>

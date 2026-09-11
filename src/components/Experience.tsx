@@ -1,27 +1,70 @@
 "use client";
 
-import { Text, List, Heading, Stack, Box } from "@chakra-ui/react";
-import {
-  TimelineConnector,
-  TimelineContent,
-  TimelineItem,
-  TimelineRoot,
-  TimelineTitle,
-  TimelineDescription,
-} from "@/components/ui/timeline";
-import { LuCircleCheck } from "react-icons/lu";
-import Section from "./Generics/Section";
+import { Box, Heading, List, Stack, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { FaCss3, FaGit, FaGithub, FaNodeJs, FaReact } from "react-icons/fa6";
+import {
+  FaCss3,
+  FaGit,
+  FaGithub,
+  FaHtml5,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa6";
+import { LuCircleCheck } from "react-icons/lu";
+import { RiNextjsFill } from "react-icons/ri";
 import {
   SiChakraui,
   SiJavascript,
+  SiJest,
   SiNestjs,
   SiPostgresql,
+  SiStyledcomponents,
+  SiSupabase,
+  SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
 import { useTranslations } from "next-intl";
+import Section from "./Generics/Section";
+import {
+  TimelineConnector,
+  TimelineContent,
+  TimelineDescription,
+  TimelineItem,
+  TimelineRoot,
+  TimelineTitle,
+} from "@/components/ui/timeline";
+
+type ExperienceEntry = {
+  title: string;
+  company: string;
+  period: string;
+  details: string[];
+  side: "left" | "right";
+};
+
+type Skill = {
+  icon: ReactNode;
+  name: string;
+};
+
+const skills: Skill[] = [
+  { icon: <FaHtml5 />, name: "HTML" },
+  { icon: <FaCss3 />, name: "CSS" },
+  { icon: <SiJavascript />, name: "JavaScript" },
+  { icon: <SiTypescript />, name: "TypeScript" },
+  { icon: <FaReact />, name: "React" },
+  { icon: <RiNextjsFill />, name: "Next.js" },
+  { icon: <SiChakraui />, name: "Chakra UI" },
+  { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+  { icon: <SiStyledcomponents />, name: "Styled Components" },
+  { icon: <FaNodeJs />, name: "Node.js" },
+  { icon: <SiNestjs />, name: "NestJS" },
+  { icon: <SiPostgresql />, name: "PostgreSQL" },
+  { icon: <SiSupabase />, name: "Supabase" },
+  { icon: <SiJest />, name: "Jest" },
+  { icon: <FaGit />, name: "Git" },
+  { icon: <FaGithub />, name: "GitHub" },
+];
 
 export function SkillsBox({
   skillIcon,
@@ -56,105 +99,130 @@ export function SkillsBox({
   );
 }
 
+function ExperienceContent({ experience }: { experience: ExperienceEntry }) {
+  const isLeft = experience.side === "left";
+
+  return (
+    <TimelineContent
+      flex="1"
+      order={isLeft ? { base: 1, md: 0 } : 0}
+      alignItems={
+        isLeft ? { base: "flex-start", md: "flex-end" } : "flex-start"
+      }
+    >
+      <TimelineTitle
+        fontSize={{ base: "1rem", md: "1.2rem" }}
+        textAlign={isLeft ? { base: "left", md: "right" } : "left"}
+      >
+        {experience.title}
+      </TimelineTitle>
+      <TimelineDescription pb={4}>
+        <Text fontSize={{ base: ".8rem", md: ".9rem" }}>
+          {experience.company} | {experience.period}
+        </Text>
+      </TimelineDescription>
+      <List.Root
+        gap={1}
+        maxW="460px"
+        fontSize={{ base: ".85rem", md: "1rem" }}
+        textAlign="left"
+      >
+        {experience.details.map((detail) => (
+          <List.Item key={detail}>{detail}</List.Item>
+        ))}
+      </List.Root>
+    </TimelineContent>
+  );
+}
+
+function ExperienceTimelineItem({
+  experience,
+}: {
+  experience: ExperienceEntry;
+}) {
+  const content = <ExperienceContent experience={experience} />;
+
+  return (
+    <TimelineItem>
+      {experience.side === "left" ? (
+        content
+      ) : (
+        <TimelineContent flex="1" display={{ base: "none", md: "flex" }} />
+      )}
+      <TimelineConnector>
+        <LuCircleCheck size={32} />
+      </TimelineConnector>
+      {experience.side === "right" ? (
+        content
+      ) : (
+        <TimelineContent flex="1" display={{ base: "none", md: "flex" }} />
+      )}
+    </TimelineItem>
+  );
+}
+
 export default function Experience() {
   const t = useTranslations("Experience");
+  const experiences: ExperienceEntry[] = [
+    {
+      title: t("frontend-job"),
+      company: "SEIDOR",
+      period: `02/2025 - ${t("current")}`,
+      details: t.raw("frontend-job-details") as string[],
+      side: "left",
+    },
+    {
+      title: t("volunteer-job"),
+      company: "zDevs",
+      period: "01/2025 - 03/2025",
+      details: t.raw("volunteer-job-details") as string[],
+      side: "right",
+    },
+    {
+      title: t("junior-job"),
+      company: "Monocard",
+      period: "09/2023 - 07/2024",
+      details: t.raw("junior-job-details") as string[],
+      side: "left",
+    },
+    {
+      title: t("internship"),
+      company: "Monocard",
+      period: "09/2021 - 08/2023",
+      details: t.raw("internship-details") as string[],
+      side: "right",
+    },
+  ];
 
   return (
     <Section title={t("title")} sectionId="experience">
       <Stack direction="column" gap={24} w="100%">
-        <Heading textAlign="center" fontSize="1.2rem" color="#8f8f8f" mt={-2}>
+        <Heading
+          textAlign="center"
+          fontSize="1.2rem"
+          color="#8f8f8f"
+          mt={-2}
+        >
           {t("subtitle")}
         </Heading>
 
         <Stack direction="row" flexWrap="wrap" justifyContent="center" gap={3}>
-          <SkillsBox skillIcon={<FaCss3 />} skillName={"CSS"} />
-          <SkillsBox skillIcon={<SiJavascript />} skillName={"Javascript"} />
-          <SkillsBox skillIcon={<SiTypescript />} skillName={"Typescript"} />
-          <SkillsBox skillIcon={<FaReact />} skillName={"ReactJS"} />
-          <SkillsBox skillIcon={<RiNextjsFill />} skillName={"NextJS"} />
-          <SkillsBox skillIcon={<SiChakraui />} skillName={"Chakra UI"} />
-          <SkillsBox skillIcon={<FaGit />} skillName={"GIT"} />
-          <SkillsBox skillIcon={<FaGithub />} skillName={"GitHub"} />
-          <SkillsBox skillIcon={<SiPostgresql />} skillName={"PostgreSQL"} />
-          <SkillsBox skillIcon={<FaNodeJs />} skillName={"NodeJS"} />
-          <SkillsBox skillIcon={<SiNestjs />} skillName={"NestJS"} />
+          {skills.map((skill) => (
+            <SkillsBox
+              key={skill.name}
+              skillIcon={skill.icon}
+              skillName={skill.name}
+            />
+          ))}
         </Stack>
 
         <TimelineRoot variant="outline" size="xl" w="100%" maxW="1200px">
-          <TimelineItem>
-            <TimelineContent flex="1" alignItems="flex-end">
-              <TimelineTitle fontSize={{ base: "1rem", md: "1.2rem" }}>
-                {t("frontend-job")}
-              </TimelineTitle>
-
-              <TimelineDescription pb={4}>
-                <Text fontSize={{ base: ".8rem", md: ".9rem" }}>
-                  Seidor | 02/2025 - {t("current")}
-                </Text>
-              </TimelineDescription>
-
-              <List.Root gap={1} fontSize={{ base: ".9rem", md: "1rem" }}>
-                <List.Item>CSS, React, NextJs, Typescript</List.Item>
-                <List.Item>Github, GitHub Projects</List.Item>
-              </List.Root>
-            </TimelineContent>
-
-            <TimelineConnector>
-              <LuCircleCheck size={32} />
-            </TimelineConnector>
-            <TimelineContent flex="1" />
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineContent flex="1" />
-            <TimelineConnector>
-              <LuCircleCheck size={32} />
-            </TimelineConnector>
-
-            <TimelineContent flex="1">
-              <TimelineTitle fontSize={{ base: "1rem", md: "1.2rem" }}>
-                {t("junior-job")}
-              </TimelineTitle>
-
-              <TimelineDescription
-                pb={4}
-                fontSize={{ base: ".8rem", md: ".9rem" }}
-              >
-                Monocard | 09/2023 - 07/2024
-              </TimelineDescription>
-
-              <List.Root gap={1} fontSize={{ base: ".9rem", md: "1rem" }}>
-                <List.Item>React, NextJs, Typescript, Chakra UI</List.Item>
-                <List.Item>PostgreSQL, NodeJs, NestJs</List.Item>
-                <List.Item>Github, GitHub Projects</List.Item>
-              </List.Root>
-            </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineContent flex="1" alignItems="flex-end">
-              <TimelineTitle fontSize={{ base: "1rem", md: "1.2rem" }}>
-                {t("internship")}
-              </TimelineTitle>
-
-              <TimelineDescription pb={4}>
-                <Text fontSize={{ base: ".8rem", md: ".9rem" }}>
-                  Monocard | 09/2021 - 08/2023
-                </Text>
-              </TimelineDescription>
-
-              <List.Root gap={1} fontSize={{ base: ".9rem", md: "1rem" }}>
-                <List.Item>CSS, React, NextJs</List.Item>
-                <List.Item>Wordpress (Elementor)</List.Item>
-                <List.Item>Github, GitHub Projects</List.Item>
-              </List.Root>
-            </TimelineContent>
-
-            <TimelineConnector>
-              <LuCircleCheck size={32} />
-            </TimelineConnector>
-            <TimelineContent flex="1" />
-          </TimelineItem>
+          {experiences.map((experience) => (
+            <ExperienceTimelineItem
+              key={`${experience.company}-${experience.period}`}
+              experience={experience}
+            />
+          ))}
         </TimelineRoot>
       </Stack>
     </Section>

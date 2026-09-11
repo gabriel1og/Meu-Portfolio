@@ -17,8 +17,29 @@
         "subtitle": "Experience and skills",
         "current": "Current",
         "frontend-job": "Frontend Engineer",
+        "frontend-job-details": [
+            "React, TypeScript, Styled Components, and Design System",
+            "Microfrontend architecture, REST API integration, and internationalization",
+            "Testing with Jest, Testing Library, and MSW; collaboration with Git and GitHub"
+        ],
+        "volunteer-job": "Volunteer Frontend Developer",
+        "volunteer-job-details": [
+            "React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui",
+            "Responsive interfaces focused on performance and accessibility",
+            "Collaborative development of a platform and landing page"
+        ],
         "junior-job": "Fullstack Developer",
-        "internship": "Development Intern"
+        "junior-job-details": [
+            "React, Next.js, TypeScript, and Chakra UI",
+            "Node.js, NestJS, PostgreSQL, and REST APIs",
+            "Full-stack development and frontend-backend integration"
+        ],
+        "internship": "Development Intern",
+        "internship-details": [
+            "HTML, CSS, JavaScript, React, and Next.js",
+            "WordPress with Elementor and responsive interface development",
+            "Git, GitHub, product maintenance, and team collaboration"
+        ]
     },
     "Projects": {
         "title": "My projects",
@@ -26,12 +47,10 @@
         "ecomm-project-description": "Project representing a petshop ecommerce, with related products and services, dashboard for admin and also user account and cart pages.",
         "taxi-lp-project-title": "Landing Page - Adapted Transportation for Wheelchair Users",
         "taxi-lp-project-description": "Landing Page for booking taxi rides with services adapted for wheelchair users.",
-        "finances-project-title": "Finance Management",
-        "finances-project-description": "Project simulating a finance management dashboard with personal monetary inflows and outflows",
-        "crud-project-title": "CRUD",
-        "crud-project-description": "Project simulating a user registration form with name, email, phone, and date of birth",
-        "memory-game-project-title": "Memory Game",
-        "memory-game-project-description": "Project simulating a memory game with time tracking and move count"
+        "finances-project-title": "Flowly - Personal Finance",
+        "finances-project-description": "A full-stack personal finance app with authentication, monthly budgeting, transaction management and filters, dashboards, and reports.",
+        "tasks-status-project-title": "Status Management",
+        "tasks-status-project-description": "An application that centralizes tasks, sprints, statuses, and environments, with creation, inline editing, filters, sorting, and operational links."
     },
     "Contact": {
         "title": "Get in touch with me",
