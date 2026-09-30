@@ -56,7 +56,7 @@ export function ProjectCard({
       >
         <Image
           rounded="md"
-          objectPosition="top"
+          objectPosition="center top"
           width="90%"
           h="200px"
           src={image.src}
@@ -71,6 +71,7 @@ export function ProjectCard({
         flexDirection="column"
         position="relative"
         top="-100px"
+        mx="auto"
         w="100%"
         maxW="3xl"
         opacity=".95"
